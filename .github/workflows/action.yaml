@@ -1,0 +1,17 @@
+name: Deployment
+on:
+  push:
+    branches:
+      - main
+env:
+  DATABRICKS_HOST: https://dbc-89c9e463-7ff5.cloud.databricks.com
+  DATABRICKS_REPO_ID: "3704530822795613"
+
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: sleepy0owl/databricks-deploy@dev
+        with:
+          databricks-repo-branch: 'main'
+        
