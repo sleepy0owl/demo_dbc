@@ -11,6 +11,7 @@ jobs:
   deployment:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/setup-node@v3
       - uses: sleepy0owl/databricks-deploy@main
         with:
           databricks-repo-branch: 'main'
