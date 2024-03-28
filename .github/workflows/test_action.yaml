@@ -12,7 +12,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/setup-node@v3
-      - uses: sleepy0owl/databricks-deploy@main
+      - uses: antstackio/databricks-deploy@v1.0.3
         with:
           databricks-repo-branch: 'main'
+          databricks-token: ${{ secrets.DATABRICKS_TOKEN }}
+
         
